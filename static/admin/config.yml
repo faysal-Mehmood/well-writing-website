@@ -1,0 +1,155 @@
+
+backend:
+  name: github
+  branch: develop
+  repo: muhammadqamar/well-written-online
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+
+  - name: "homepage"
+    label: "Home Page"
+    files:
+      - file: "markdown/Home/Testominials.md"
+        label: "testominials"
+        name: "testominials"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "Testominials"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: User heading, name: user heading, widget: text}
+          - {label: User Intro, name: user intro, widget: object, fields: [{label: Users, name: users, widget: list, fields: [{label: Author Discription, name: author discription, widget: text}, {label: Author Image, name: author image, widget: image}, {label: Author name text, name: author name text, widget: string, default: false}, {label: Author Name Image, name: author name image, widget: image, default: false}]}]}
+      
+      - file: "markdown/Home/services.md"
+        label: "services"
+        name: "Cards"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services"}
+          - {label: Title, name: title, widget: string}
+          - {label: Top heading one, name: Top heading one, widget: text}
+          - {label: Top heading two, name: Top heading two, widget: text}
+          - {label: Intro Cards, name: intro cards, widget: object, fields: [{label: Cards, name: Cards, widget: list, fields: [{label: Card Image, name: card image, widget: image}, {label: Card Text, name: card text, widget: text}, {label: Card Discription, name: cardDiscription, widget: markdown}]}]}
+
+      - file: "markdown/Home/shortintroduction.md"
+        label: "short introduction"
+        name: "short introduction"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "short-introduction"}
+          - {label: Title, name: title, widget: string}
+          - {label:  heading top, name: button heading top, widget: text}
+          - {label:  heading medium, name: button heading medium, widget: text}
+          - {label:  heading bottom, name: button heading bottom, widget: text}
+      
+      - file: "markdown/Home/socialmedia.md"
+        label: "Scoial Media handlers"
+        name: "Scoial Media handlers"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "social-media"}
+          - {label: Title, name: title, widget: string}
+          - {label:  heading top, name: button heading top, widget: text}
+          - {label: social media, name: social media, widget: object, fields: [{label: media, name: media, widget: list, fields: [{label: social icon, name: social icon, widget: image}, {label: social link, name: social link, widget: string}]}]}
+
+  - name: "Our Team"
+    label: "Our Team"
+    files:
+      - file: "markdown/Team/team.md"
+        label: "Team"
+        name: "team"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team"}
+          - {label: Title, name: title, widget: string}
+          - {label: heading, name: heading, widget: text}
+          - {label: description, name: description , widget:  markdown}      
+          - {label: Team Member, name: teammember, widget: object, fields: [{label: team, name: team, widget: list, fields: [{label: Member Image, name: Member image, widget: image}, {label: Member Name, name: Member Name, widget: text},  {label: Member Designation, name: Member Designation, widget: text},  {label: Member Discription, name: Member Discription, widget: markdown}]}]}
+
+  - name: "About"
+    label: "About"
+    files:
+      - file: "markdown/About/about.md"
+        label: "About"
+        name: "About"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
+          - {label: Title, name: title, widget: string}
+          - {label: heading, name: heading, widget: text}
+          - {label: description, name: description , widget:  markdown} 
+
+  - name: "writer Training"
+    label: "Writer Training"
+    files:
+      - file: "markdown/writertraining/writertraining.md"
+        label: "Writer Training"
+        name: "Writer Training"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "writertraining"}
+          - {label: Title, name: title, widget: string}
+          - {label: heading, name: heading, widget: text}
+          - {label: description, name: description , widget:  markdown} 
+          - {label: cources heading one, name: cources heading one, widget: string}
+          - {label: cources heading two, name: cources heading two, widget: string}
+          - {label: courses Detail, name: courses Detail, widget: object, fields: [{label: courses Detail, name: courses Detail, widget: list, fields: [{label: courses description, name: courses description, widget: text}, {label: courses price, name: courses price,  widget: text},  {label: courses perks, name: courses perks,widget: object, fields: [{label: courses perks, name: courses perks, widget: list, fields: [{label: perks, name: perks, widget: string}]}]}]}]}
+ 
+  - name: "writer services"
+    label: "writer services"
+    files:
+      - file: "markdown/writerservices/writerservices.md"
+        label: "writer services"
+        name: "writer services"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "writerservices"}
+          - {label: Title, name: title, widget: string}
+          - {label: heading, name: heading, widget: text}
+          - {label: description, name: description , widget:  markdown} 
+          - {label: writing services text, name: writing services text, widget: string}
+          - {label: all services, name: all services, widget: object, fields: [{label: service, name: service, widget: list, fields: [{label: service Image, name: service image, widget: image}, {label: service name, name: service description, widget: text}, {label: service Discription, name: servicediscription, widget: markdown}]}]}
+
+
+
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog.md'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
+      - { label: "Category", name: "category", widget: "select", options: ["Article", "News", "Gernal"]}
+      - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: "Authors", name: "authors", widget: "string"}
+      - { label: 'Author Image', name: 'authorimage', widget: image }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'featuredimage', widget: image }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+
+  - name: "Layout"
+    label: "Layout"
+    files:
+      - file: "markdown/layout/footer.md"
+        label: "footer"
+        name: "footer"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "footer"}
+          - {label: Title, name: title, widget: string}
+          - {label: heading title, name: headingonw, widget: text}
+          - {label: heading description, name: headingtwo, widget: text}
+
+      - file: "markdown/layout/header.md"
+        label: "header"
+        name: "header"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "header"}
+          - {label: Title, name: title, widget: string}
+          - {label: logo, name: logo, widget: image}
+      
+      - file: "markdown/layout/banner.md"
+        label: "banner"
+        name: "banner"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "banner"}
+          - {label: Title, name: title, widget: string}
+          - {label: hero Image, name: hero Image, widget: image}
+          - {label: heading, name: heading, widget: text}
+        
+

@@ -1,0 +1,7 @@
+{
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.arrowParens": "avoid",
+    "prettier.printWidth": 3,
+    "editor.formatOnSave": true
+}

@@ -1,0 +1,68 @@
+.banner-section {
+  height: 360px;
+  width: 100%;
+  //   background-image: url('../../assets/images/writerimage/writingbook.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%
+    50%;
+  //   opacity: 0.19;
+
+  //   position: relative;
+  //   &:before {
+  //     background-color: rgba(
+  //       8,
+  //       72,
+  //       146,
+  //       0.75
+  //     );
+  //     content: '';
+  //     display: block;
+  //     height: 100%;
+  //     position: absolute;
+  //     width: 100%;
+  //   }
+  .banner-section-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      250,
+      250,
+      250,
+      0.8
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .banner-section-detail {
+      width: 1000px;
+      margin: 0 auto;
+
+      @media (max-width: 767px) {
+
+        padding: 20px;
+      }
+      @media (max-width: 990px) {
+        width: 100%;
+        padding: 20px;
+      }
+
+      h1 {
+        color: black;
+        font-weight: bold;
+        // font-size: 24px;
+        line-height: 33px;
+        margin: 20px
+          0;
+      }
+      .banner-section-icons {
+        .icons {
+          width: 30px;
+          height: 30px;
+          margin: 0
+            10px;
+        }
+      }
+    }
+  }
+}

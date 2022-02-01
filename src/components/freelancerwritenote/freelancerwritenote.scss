@@ -1,0 +1,33 @@
+.freelancer-note {
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 20px;
+  }
+  padding: 20px
+    20px
+    20px
+    20px;
+  .freelancer-note-detail {
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 0px;
+    }
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 40px;
+    h2 {
+      color: #b4dbdc;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 41px;
+      width: 700px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    p {
+      margin: 30px
+        0;
+    }
+  }
+}

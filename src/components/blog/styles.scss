@@ -1,0 +1,180 @@
+.blog-page{
+    max-width: 1110px;
+    margin: auto;
+
+    @media (max-width:996px){
+        padding: 0 17px;
+    }
+   
+    .back-page{
+        width: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 41px 0 42px;
+
+        @media (max-width:767px){
+            width: 62px;
+            margin: 30px 0 21px;
+        }
+
+        .back-img{
+           width: 18px;
+        }
+        .back-Arow{
+            font-size: 16px;
+            line-height: 22px;
+            color: #29AAE1;
+            
+            &:hover{
+                border-bottom: 1px solid #29AAE1;
+            }
+
+            // @media (max-width:767px){
+            //     font-size: 14px;
+            //     // line-height: 25px;
+            // }
+        }
+    }
+    .Author-Catagaris{
+        max-width: 730px;
+        margin: auto;
+        .Catagri{
+            font-size: 16px;
+            line-height: 22px;
+            color: #29AAE1;
+            margin-bottom: 8px;
+
+            @media (max-width:767px){
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+        .Title{
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 65px;
+            color: #221F1F;
+            margin-bottom: 12px;
+
+            @media (max-width:767px){
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 33px;
+                margin-bottom: 26px;
+            }
+        }
+        .Author-detall{
+             display: flex;
+             align-items: center;
+             margin-bottom: 32px;
+            .Author-img{
+                width: 51px;
+                border-radius: 50%;
+
+                @media (max-width:767px){
+                    width: 41px;
+                }
+            }
+            .Author-name{
+                font-size: 16px;
+                line-height: 22px;
+                color: #29AAE1;
+                border-right: 1px solid #29AAE1;
+                margin-left: 15px;
+                padding-right: 10px;
+
+                @media (max-width:767px){
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+            }
+            .Author-Date{
+                font-size: 16px;
+                line-height: 22px;
+                color: #29AAE1;
+                margin-left: 10px;
+
+                @media (max-width:767px){
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+            }
+        }
+
+        .shear-icon{
+            max-width: 154px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 71px;
+
+            @media (max-width:767px){
+                margin-bottom: 33.56px;
+            }
+            
+            .facebook{
+                background-image: url('../../assets/images/blogIcons/Facebook2.svg');
+                background-size: 31px
+            }
+            & img{
+                width: 31px;
+            }
+        }
+    }
+    .Mane-Blog{
+        .blog-Img{
+            max-width: 100%;
+            height: 429px;
+            margin-bottom: 67px;
+
+            @media (max-width:767px){
+                height: 265px;
+                margin-bottom: 27px;
+            }
+        }
+        .blog-Description{
+            max-width: 730px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 33px;
+            color: #000000;
+            margin-bottom: 79px;
+
+            iframe {
+                width: 100%;
+    min-height: 400px;
+    border: none;
+    margin: 25px 0px;;
+    @media (max-width:767px) {
+        min-height: 220px;
+    }
+            }
+
+            @media (max-width:767px){
+                font-size: 14px;
+                line-height: 23px;
+                margin-bottom: 31px;
+            }
+            
+            
+            & p{
+                padding-bottom: 30px;
+
+                & img{
+                    width: 100%;
+                }
+
+            }
+            
+        }
+    }
+}
+
+.anchortag {
+    border: 3px solid #ccc; 
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
